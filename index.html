@@ -70,19 +70,16 @@
       <!-- Menu Central em Cápsula -->
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="#hero"><span class="bullet">•</span> Home</a>
+          <a href="#hero"><span class="bullet">•</span> Início</a>
         </li>
         <li class="nav-item">
           <a href="#sobre"><span class="bullet">•</span> Sobre</a>
         </li>
         <li class="nav-item">
-          <a href="#processo"><span class="bullet">•</span> Processo</a>
+          <a href="#portfolio"><span class="bullet">•</span> Portfólio</a>
         </li>
         <li class="nav-item">
           <a href="#precos"><span class="bullet">•</span> Preços</a>
-        </li>
-        <li class="nav-item">
-          <a href="#portfolio"><span class="bullet">•</span> Portfólio</a>
         </li>
       </ul>
 
@@ -102,21 +99,20 @@
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
     <ul class="mobile-drawer-links">
-      <li><a href="#hero"><span class="bullet">•</span> Home</a></li>
+      <li><a href="#hero"><span class="bullet">•</span> Início</a></li>
       <li><a href="#sobre"><span class="bullet">•</span> Sobre</a></li>
-      <li><a href="#processo"><span class="bullet">•</span> Processo</a></li>
-      <li><a href="#precos"><span class="bullet">•</span> Preços</a></li>
       <li><a href="#portfolio"><span class="bullet">•</span> Portfólio</a></li>
+      <li><a href="#precos"><span class="bullet">•</span> Preços</a></li>
       <li><a href="#contato"><span class="bullet">•</span> Contato</a></li>
     </ul>
   </div>
 
   <!-- =========================================================================
-       HERO SECTION (Fusão Vídeo + Tipografia NOVASITE)
+       HERO SECTION (Refatorada: Fusão Vídeo + Bloco Central + Título Gradiente)
        ========================================================================= -->
   <section class="hero-section" id="hero">
     
-    <!-- Background Video Container -->
+    <!-- Background Video Container com Névoa Volumétrica 3D -->
     <div class="hero-video-wrapper">
       <!-- Desktop Video -->
       <video class="hero-video" autoplay loop muted playsinline preload="metadata">
@@ -131,48 +127,61 @@
 
     <div class="container hero-content">
       
-      <!-- Top Institutional Grid (Micro-textos NOVASITE) -->
+      <!-- Top Institutional Micro-Grid -->
       <div class="hero-top-grid">
         <div class="hero-micro-left">
           <div class="hero-badge-live">
             <span class="pulse-dot"></span>
-            <span>Alta Performance & Conversão</span>
+            <span>Estúdio Santa Catarina • Atendimento Brasil</span>
           </div>
-          <p class="hero-top-desc">
-            Criamos landing pages e sites focados em conversão e retenção.
-          </p>
         </div>
 
         <div class="hero-tags-right">
-          <div class="hero-tag-item">Landing Pages Express</div>
+          <div class="hero-tag-item">Landing Pages Express (24h-48h)</div>
           <div class="hero-tag-item">Sites Institucionais</div>
-          <div class="hero-tag-item">UI/UX Engineering</div>
-          <div class="hero-tag-item">Santa Catarina • Atendimento Brasil</div>
+          <div class="hero-tag-item">Lighthouse 100/100</div>
         </div>
       </div>
 
-      <!-- Mid Hook Badge -->
-      <div class="hero-mid-hook">
-        <div class="hero-hook-pill">
-          <i data-lucide="zap" style="color: var(--ocean); width: 16px; height: 16px;"></i>
-          <span>Entrega de Landing Pages em <strong>24h a 48 horas</strong></span>
-        </div>
-      </div>
-
-      <!-- Bottom Stage: Massive Display Title & Floating Preview Card -->
-      <div class="hero-bottom-stage">
+      <!-- Hero Middle Stage: Bloco Central Persuasivo + Card Flutuante Lateral Seguro -->
+      <div class="hero-middle-stage">
         
-        <h1 class="hero-massive-title">
-          RvLL.Dev<span class="symbol">®</span>
-        </h1>
+        <!-- Bloco Central Persuasivo (Elimina o vazio da tela) -->
+        <div class="hero-central-block">
+          
+          <div class="hero-eyebrow-pill">
+            <span class="bullet">•</span>
+            <span>ALTA PERFORMANCE &amp; CONVERSÃO</span>
+          </div>
 
-        <!-- Floating Mini-Player / Preview Card (NOVASITE Style) -->
-        <div class="hero-floating-card">
+          <h1 class="hero-h1-headline">
+            Interfaces modernas que transformam visitantes em <span class="hero-headline-highlight">clientes</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Desenvolvimento ágil de Landing Pages e Sites de alto padrão. Projetos entregues com foco em velocidade, estética e resultados reais.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#precos" class="hero-btn-primary" aria-label="Ver Planos e Preços">
+              <span>Ver Planos &amp; Preços</span>
+              <i data-lucide="arrow-down" style="width: 17px; height: 17px;"></i>
+            </a>
+            <a href="#portfolio" class="hero-btn-secondary" aria-label="Conhecer Portfólio de Projetos">
+              <span>Conhecer Portfólio</span>
+              <i data-lucide="arrow-right" style="width: 17px; height: 17px;"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Card Flutuante Lateral Seguro (Z-Index 20, sem sobrepor o título) -->
+        <aside class="hero-floating-case-card" aria-label="Case em Destaque">
           <div class="floating-card-header">
             <span class="floating-card-tag">
               <span class="pulse-dot"></span> Case em Destaque
             </span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--pearl-faint);">01 / 04</span>
+            <span class="floating-card-counter">01 / 04</span>
           </div>
 
           <div class="floating-card-media">
@@ -183,8 +192,8 @@
           <div class="floating-card-meta">
             <div class="floating-card-title">
               <span>Herval d'Oeste • SC</span>
-              <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" style="color: var(--ocean); font-size: 0.8rem; display: flex; align-items: center; gap: 2px;">
-                Ver <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
+              <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" class="floating-card-link">
+                Ver site <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
               </a>
             </div>
             <div class="floating-card-sub">
@@ -197,8 +206,17 @@
               <span class="bar"></span>
             </div>
           </div>
-        </div>
+        </aside>
 
+      </div>
+
+      <!-- Bottom Stage: Título Massivo "RvLL.Dev" com Gradiente Elegante e Z-Index 10 Desobstruído -->
+      <div class="hero-bottom-stage">
+        <div class="hero-massive-title-container">
+          <div class="hero-massive-title" aria-label="RvLL.Dev">
+            RvLL.Dev<span class="symbol">®</span>
+          </div>
+        </div>
       </div>
 
     </div>

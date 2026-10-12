@@ -146,31 +146,40 @@ function initGSAPAnimations() {
 
   // Hero Top Elements Reveal
   gsap.from('.hero-top-grid > *', {
-    y: 30,
+    y: 20,
     opacity: 0,
-    duration: 0.9,
-    stagger: 0.15,
+    duration: 0.8,
+    stagger: 0.12,
     ease: 'power2.out',
-    delay: 0.4
+    delay: 0.3
+  });
+
+  // Hero Central Value Block Reveal
+  gsap.from('.hero-central-block', {
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out',
+    delay: 0.45
+  });
+
+  // Hero Lateral Case Card Reveal
+  gsap.from('.hero-floating-case-card', {
+    scale: 0.95,
+    opacity: 0,
+    y: 30,
+    duration: 0.9,
+    ease: 'power3.out',
+    delay: 0.6
   });
 
   // Hero Massive Title ("RvLL.Dev") Bridge Animation
   gsap.from('.hero-massive-title', {
-    y: 80,
+    y: 50,
     opacity: 0,
-    duration: 1.2,
+    duration: 1.1,
     ease: 'power4.out',
-    delay: 0.6
-  });
-
-  // Floating Preview Card Reveal
-  gsap.from('.hero-floating-card', {
-    scale: 0.9,
-    opacity: 0,
-    y: 40,
-    duration: 1,
-    ease: 'power3.out',
-    delay: 0.8
+    delay: 0.7
   });
 
   if (typeof ScrollTrigger === 'undefined') return;
