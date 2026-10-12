@@ -112,18 +112,24 @@
        ========================================================================= -->
   <section class="hero-section" id="hero">
     
-    <!-- Background Video Container com Overlay Suave para Vídeo Nítido -->
-    <div class="hero-video-wrapper">
-      <!-- Desktop Video -->
-      <video class="hero-video" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/videos/videoinicial.mp4" type="video/mp4">
-      </video>
-      <!-- Mobile Video -->
-      <video class="hero-video-mobile" autoplay loop muted playsinline preload="metadata">
-        <source src="assets/videos/videoinicialmobile.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-    </div>
+    <!-- Background Video com Autoplay Obrigatório e Suporte Mobile/Desktop -->
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      class="hero-bg-video absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+      id="hero-video"
+    >
+      <!-- Para mobile -->
+      <source src="videoinicialmobile.mp4" type="video/mp4" media="(max-width: 768px)" />
+      <!-- Para desktop -->
+      <source src="videoinicial.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay Gradiente Cinematográfico -->
+    <div class="hero-overlay absolute inset-0 bg-black/60 backdrop-brightness-75 z-1 pointer-events-none"></div>
 
     <div class="container hero-content">
       
