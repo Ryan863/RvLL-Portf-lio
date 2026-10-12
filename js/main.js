@@ -159,7 +159,7 @@ function initLightbox() {
 }
 
 /* --------------------------------------------------------------------------
-   5. GSAP & ScrollTrigger Animations
+   5. GSAP & ScrollTrigger Animations (Zero Pinning, Free Native Scroll)
    -------------------------------------------------------------------------- */
 function initGSAPAnimations() {
   if (typeof gsap === 'undefined') {
@@ -169,57 +169,100 @@ function initGSAPAnimations() {
 
   if (typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
-    
+
+    // Configuração de compatibilidade total para dispositivos móveis
+    ScrollTrigger.config({
+      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
+    });
+
+    // Mobile: rolagem 100% livre e limpa sem pinning ou scroll-jacking
+    ScrollTrigger.matchMedia({
+      // Desktop: animações sutis de entrada
+      "(min-width: 769px)": function() {
+        gsap.from('.hero-central-block', {
+          y: 15,
+          duration: 0.8,
+          ease: 'power2.out',
+          delay: 0.1,
+          clearProps: 'transform'
+        });
+
+        gsap.from('.hero-massive-title', {
+          y: 15,
+          duration: 0.9,
+          ease: 'power2.out',
+          delay: 0.2,
+          clearProps: 'transform'
+        });
+      },
+
+      // Mobile: apenas fade-in sem qualquer interferência de scroll
+      "(max-width: 768px)": function() {
+        gsap.from('.hero-central-block', {
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          clearProps: 'all'
+        });
+      }
+    });
+
+    // Recalcula após carregamento total de fontes e imagens
+    window.addEventListener('load', () => {
+      ScrollTrigger.refresh();
+    });
+
     // Atualiza cálculos do ScrollTrigger dinamicamente em qualquer alteração de zoom ou resize
     window.addEventListener('resize', () => {
       ScrollTrigger.refresh();
     });
+  } else {
+    // Fallback sem ScrollTrigger
+    gsap.from('.hero-central-block', {
+      y: 15,
+      duration: 0.8,
+      ease: 'power2.out',
+      delay: 0.1,
+      clearProps: 'transform'
+    });
   }
-
-  // Floating Pill Nav: mantido estável via CSS sem deslocamento destrutivo de transform
-  // Hero Elements: animações sutis de entrada com limpeza imediata de propriedades (clearProps)
-  gsap.from('.hero-central-block', {
-    y: 15,
-    duration: 0.8,
-    ease: 'power2.out',
-    delay: 0.1,
-    clearProps: 'transform'
-  });
-
-  gsap.from('.hero-massive-title', {
-    y: 15,
-    duration: 0.9,
-    ease: 'power2.out',
-    delay: 0.2,
-    clearProps: 'transform'
-  });
 }
 
 /* --------------------------------------------------------------------------
-   6. Active Nav Link on Scroll
+   6. Active Nav Link on Scroll (Throttled & Passive)
    -------------------------------------------------------------------------- */
 function initActiveNavOnScroll() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-item a');
+  if (!sections.length || !navLinks.length) return;
+
+  let ticking = false;
 
   window.addEventListener('scroll', () => {
-    let currentId = '';
-    const scrollPos = window.scrollY + 200;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        let currentId = '';
+        const scrollPos = window.scrollY + 200;
 
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = section.getAttribute('id');
-      }
-    });
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            currentId = section.getAttribute('id');
+          }
+        });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-      if (href === `#${currentId}`) {
-        link.classList.add('active');
-      }
-    });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href === `#${currentId}`) {
+            link.classList.add('active');
+          }
+        });
+
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 }
