@@ -378,27 +378,27 @@ body::before {
    HERO MIDDLE STAGE: BLOCO CENTRAL PERSUASIVO & CTAs ALINHADOS
    -------------------------------------------------------------------------- */
 .hero-middle-stage {
-  max-width: 56rem;
+  max-width: 48rem;
   width: 100%;
-  margin: auto;
-  text-align: center;
+  margin: auto auto auto 0;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   z-index: 20;
 }
 
 .hero-central-block {
-  max-width: 56rem;
+  max-width: 48rem;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-eyebrow-pill {
@@ -434,7 +434,7 @@ body::before {
   color: var(--pearl);
   margin-bottom: 1.25rem;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  text-align: center;
+  text-align: left;
 }
 
 .hero-headline-highlight {
@@ -450,18 +450,18 @@ body::before {
   font-size: clamp(1rem, 1.2vw, 1.18rem);
   color: var(--pearl-muted);
   line-height: 1.6;
-  max-width: 44rem;
-  margin-left: auto;
+  max-width: 40rem;
+  margin-left: 0;
   margin-right: auto;
   margin-bottom: 2rem;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-cta-group {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -1629,6 +1629,45 @@ body::before {
   border-color: var(--ocean);
   transform: translateY(-5px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(91, 136, 178, 0.15);
+}
+
+.portfolio-seeking-card {
+  background: radial-gradient(circle at 50% 30%, rgba(18, 44, 79, 0.35) 0%, rgba(10, 23, 42, 0.6) 100%);
+  border: 1px dashed rgba(91, 136, 178, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  position: relative;
+}
+
+.portfolio-seeking-card:hover {
+  border-style: solid;
+  border-color: var(--ocean);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(91, 136, 178, 0.2);
+}
+
+.portfolio-seeking-inner {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio-seeking-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(18, 44, 79, 0.65);
+  border: 1px solid rgba(91, 136, 178, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 25px rgba(91, 136, 178, 0.2);
 }
 
 .portfolio-media-box {
