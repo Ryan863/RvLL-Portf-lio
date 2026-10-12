@@ -56,7 +56,7 @@
 <body>
 
   <!-- =========================================================================
-       HEADER & FLOATING PILL NAVBAR (Estilo NOVASITE)
+       HEADER & FLOATING PILL NAVBAR (Estilo NOVASITE Translúcido)
        ========================================================================= -->
   <header class="header-wrapper" id="site-header">
     <nav class="floating-pill-nav" aria-label="Navegação Principal">
@@ -76,10 +76,16 @@
           <a href="#sobre"><span class="bullet">•</span> Sobre</a>
         </li>
         <li class="nav-item">
-          <a href="#portfolio"><span class="bullet">•</span> Portfólio</a>
+          <a href="#beneficios"><span class="bullet">•</span> Soluções</a>
+        </li>
+        <li class="nav-item">
+          <a href="#faq"><span class="bullet">•</span> Dúvidas</a>
         </li>
         <li class="nav-item">
           <a href="#precos"><span class="bullet">•</span> Preços</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio"><span class="bullet">•</span> Portfólio</a>
         </li>
       </ul>
 
@@ -101,18 +107,20 @@
     <ul class="mobile-drawer-links">
       <li><a href="#hero"><span class="bullet">•</span> Início</a></li>
       <li><a href="#sobre"><span class="bullet">•</span> Sobre</a></li>
-      <li><a href="#portfolio"><span class="bullet">•</span> Portfólio</a></li>
+      <li><a href="#beneficios"><span class="bullet">•</span> Soluções</a></li>
+      <li><a href="#faq"><span class="bullet">•</span> Dúvidas</a></li>
       <li><a href="#precos"><span class="bullet">•</span> Preços</a></li>
+      <li><a href="#portfolio"><span class="bullet">•</span> Portfólio</a></li>
       <li><a href="#contato"><span class="bullet">•</span> Contato</a></li>
     </ul>
   </div>
 
   <!-- =========================================================================
-       HERO SECTION (Refatorada: Fusão Vídeo + Bloco Central + Título Gradiente)
+       HERO SECTION (Limpeza Total, Vídeo Nítido & Destaque Máximo aos Títulos)
        ========================================================================= -->
   <section class="hero-section" id="hero">
     
-    <!-- Background Video Container com Névoa Volumétrica 3D -->
+    <!-- Background Video Container com Overlay Suave para Vídeo Nítido -->
     <div class="hero-video-wrapper">
       <!-- Desktop Video -->
       <video class="hero-video" autoplay loop muted playsinline preload="metadata">
@@ -127,26 +135,8 @@
 
     <div class="container hero-content">
       
-      <!-- Top Institutional Micro-Grid -->
-      <div class="hero-top-grid">
-        <div class="hero-micro-left">
-          <div class="hero-badge-live">
-            <span class="pulse-dot"></span>
-            <span>Estúdio Santa Catarina • Atendimento Brasil</span>
-          </div>
-        </div>
-
-        <div class="hero-tags-right">
-          <div class="hero-tag-item">Landing Pages Express (24h-48h)</div>
-          <div class="hero-tag-item">Sites Institucionais</div>
-          <div class="hero-tag-item">Lighthouse 100/100</div>
-        </div>
-      </div>
-
-      <!-- Hero Middle Stage: Bloco Central Persuasivo + Card Flutuante Lateral Seguro -->
+      <!-- Hero Middle Stage: Headline Persuasiva & CTAs Alinhados (Sem Distrações) -->
       <div class="hero-middle-stage">
-        
-        <!-- Bloco Central Persuasivo (Elimina o vazio da tela) -->
         <div class="hero-central-block">
           
           <div class="hero-eyebrow-pill">
@@ -174,43 +164,9 @@
           </div>
 
         </div>
-
-        <!-- Card Flutuante Lateral Seguro (Z-Index 20, sem sobrepor o título) -->
-        <aside class="hero-floating-case-card" aria-label="Case em Destaque">
-          <div class="floating-card-header">
-            <span class="floating-card-tag">
-              <span class="pulse-dot"></span> Case em Destaque
-            </span>
-            <span class="floating-card-counter">01 / 04</span>
-          </div>
-
-          <div class="floating-card-media">
-            <img src="assets/images/edi_hero.jpg" alt="Preview EDI Estética Automotiva">
-            <div class="floating-card-badge">EDI Estética Automotiva</div>
-          </div>
-
-          <div class="floating-card-meta">
-            <div class="floating-card-title">
-              <span>Herval d'Oeste • SC</span>
-              <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" class="floating-card-link">
-                Ver site <i data-lucide="arrow-up-right" style="width: 14px; height: 14px;"></i>
-              </a>
-            </div>
-            <div class="floating-card-sub">
-              Lighthouse 100/100 • Carregamento &lt; 0.9s
-            </div>
-            <div class="floating-card-pagination">
-              <span class="bar active"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </div>
-          </div>
-        </aside>
-
       </div>
 
-      <!-- Bottom Stage: Título Massivo "RvLL.Dev" com Gradiente Elegante e Z-Index 10 Desobstruído -->
+      <!-- Bottom Stage: Título Massivo "RvLL.Dev" com Gradiente Elegante Sem Sobreposição -->
       <div class="hero-bottom-stage">
         <div class="hero-massive-title-container">
           <div class="hero-massive-title" aria-label="RvLL.Dev">
@@ -299,80 +255,173 @@
   </section>
 
   <!-- =========================================================================
-       SECTION: WORK PROCESS (Processo em 3 Etapas - Layout NOVASITE)
+       SECTION: POR QUE SUA EMPRESA PRECISA DE UMA LANDING PAGE/SITE DE ALTO PADRÃO?
+       (Substitui a antiga "Work Process")
        ========================================================================= -->
-  <section class="section-process" id="processo">
+  <section class="section-benefits" id="beneficios">
     <div class="container">
       
-      <div class="process-header-row">
+      <div class="benefits-header-row">
         <div>
           <div class="section-label" style="margin-bottom: 0.75rem;">
-            <span>•</span> FLUXO DE TRABALHO
+            <span>•</span> POR QUE INVESTIR EM DESIGN &amp; ALTA PERFORMANCE
           </div>
-          <h2 class="process-main-title">WORK<br>PROCESS</h2>
+          <h2 class="benefits-main-title">
+            Por Que Sua Empresa Precisa de Uma Landing Page/Site de Alto Padrão?
+          </h2>
         </div>
-        <p class="process-subtext">
-          Veja como nosso processo comprovado transforma sua marca com soluções que geram impacto mensurável desde o primeiro dia.
+        <p class="benefits-subtext">
+          No mercado competitivo, a qualidade da sua presença digital define diretamente a decisão de compra do cliente. Veja os três pilares que transformam tráfego em faturamento:
         </p>
       </div>
 
-      <!-- Staggered Technical 3-Card Grid -->
-      <div class="process-grid">
+      <!-- Modern Bento-style 3-Card Grid -->
+      <div class="benefits-grid">
         
-        <!-- Etapa 01 -->
-        <div class="process-card step-01">
-          <div>
-            <div class="process-card-top">
-              <div class="process-badge-num">01</div>
-              <span class="process-step-indicator">ETAPA 01</span>
-            </div>
-            <div class="process-card-body">
-              <h3 class="process-card-title">BRIEFING & DEFINIÇÃO</h3>
-              <p class="process-card-desc">
-                Alinhamento dos objetivos comerciais, identidade da marca e mapeamento de conversão. Definimos a estrutura exata para cativar seu público-alvo.
-              </p>
-            </div>
+        <!-- Benefício 1: Conversão Direta -->
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">
+            <i data-lucide="target" style="width: 24px; height: 24px; color: var(--pearl);"></i>
           </div>
-          <div class="process-tag-pill">
-            <i data-lucide="compass" style="width: 14px; height: 14px;"></i> Diagnóstico Comercial
+          <div class="benefit-card-content">
+            <span class="benefit-num">01 / FOCO EM VENDAS</span>
+            <h3 class="benefit-card-title">Conversão Direta</h3>
+            <p class="benefit-card-desc">
+              Uma página estruturada estrategicamente para conduzir o visitante pelo funil persuasivo até o botão de contato, transformando cliques em clientes prontos para comprar, sem distrações e sem caminhos confusos.
+            </p>
+          </div>
+          <div class="benefit-tag-pill">
+            <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> Até +300% de Taxa de Resposta
           </div>
         </div>
 
-        <!-- Etapa 02 (Staggered Lower) -->
-        <div class="process-card step-02">
-          <div>
-            <div class="process-card-top">
-              <div class="process-badge-num">02</div>
-              <span class="process-step-indicator">ETAPA 02</span>
-            </div>
-            <div class="process-card-body">
-              <h3 class="process-card-title">DESIGN & DESENVOLVIMENTO</h3>
-              <p class="process-card-desc">
-                Criação da interface moderna, mobile-first, com stack de ponta (GSAP, Tailwind, código limpo). Visual magnético que retém e engaja.
-              </p>
-            </div>
+        <!-- Benefício 2: Autoridade Imediata -->
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">
+            <i data-lucide="shield-check" style="width: 24px; height: 24px; color: var(--pearl);"></i>
           </div>
-          <div class="process-tag-pill">
-            <i data-lucide="code-2" style="width: 14px; height: 14px;"></i> High-End Code
+          <div class="benefit-card-content">
+            <span class="benefit-num">02 / POSICIONAMENTO PREMIUM</span>
+            <h3 class="benefit-card-title">Autoridade Imediata</h3>
+            <p class="benefit-card-desc">
+              A primeira impressão do seu negócio no digital define se o cliente confia no seu serviço ou fecha a aba e procura o concorrente. Um visual impecável e editorial transmite solidez, credibilidade e alto valor percebido.
+            </p>
+          </div>
+          <div class="benefit-tag-pill">
+            <i data-lucide="award" style="width: 14px; height: 14px;"></i> Credibilidade Instantânea
           </div>
         </div>
 
-        <!-- Etapa 03 -->
-        <div class="process-card step-03">
-          <div>
-            <div class="process-card-top">
-              <div class="process-badge-num">03</div>
-              <span class="process-step-indicator">ETAPA 03</span>
+        <!-- Benefício 3: Velocidade & Retenção -->
+        <div class="benefit-card">
+          <div class="benefit-icon-badge">
+            <i data-lucide="zap" style="width: 24px; height: 24px; color: var(--pearl);"></i>
+          </div>
+          <div class="benefit-card-content">
+            <span class="benefit-num">03 / PERFORMANCE MÁXIMA</span>
+            <h3 class="benefit-card-title">Velocidade &amp; Retenção</h3>
+            <p class="benefit-card-desc">
+              Carregamento instantâneo em menos de 1 segundo (&lt; 1s) para evitar que você perca até 50% dos visitantes mobile que desistem de páginas lentas. Otimização técnica pura e pontuação máxima no Google PageSpeed/Lighthouse.
+            </p>
+          </div>
+          <div class="benefit-tag-pill">
+            <i data-lucide="gauge" style="width: 14px; height: 14px;"></i> Carregamento &lt; 1s • Lighthouse 100
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION: CURIOSIDADES, FERRAMENTAS & DÚVIDAS RÁPIDAS (FAQ)
+       ========================================================================= -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      
+      <div class="faq-header">
+        <div class="section-label">
+          <span>•</span> TRANSPARÊNCIA &amp; PROCESSO
+        </div>
+        <h2 class="faq-main-title">Curiosidades, Ferramentas &amp; Dúvidas Rápidas</h2>
+        <p class="faq-subtitle">
+          Tudo o que você precisa saber sobre as tecnologias utilizadas, prazos ágeis, segurança e manutenção contínua.
+        </p>
+      </div>
+
+      <!-- FAQ Modern Accordion Grid -->
+      <div class="faq-grid">
+        
+        <!-- Card / Item 1: Tecnologia de Ponta -->
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <div class="faq-item-icon">
+              <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
             </div>
-            <div class="process-card-body">
-              <h3 class="process-card-title">TESTES & ENTREGA EXPRESSA</h3>
-              <p class="process-card-desc">
-                Otimização de velocidade, segurança web essencial (SSL/HTTPS, sanitização) e publicação. Landing pages com entrega média de <strong>24 a 48 horas</strong>.
-              </p>
+            <div>
+              <span class="faq-category">TECNOLOGIA &amp; ARQUITETURA</span>
+              <h3 class="faq-question">Quais ferramentas e tecnologias são utilizadas?</h3>
             </div>
           </div>
-          <div class="process-tag-pill">
-            <i data-lucide="rocket" style="width: 14px; height: 14px;"></i> 24h - 48h no Ar
+          <div class="faq-answer">
+            <p>
+              Utilizamos tecnologias de última geração: <strong>Next.js / React</strong>, <strong>Tailwind CSS</strong>, <strong>Vanilla CSS otimizado</strong> e <strong>GSAP</strong> para micro-animações ultra-fluidas em 60fps. Cada linha de código é pensada para máxima velocidade, responsividade impecável em celulares e tablets, e pontuação 100/100 no Google Lighthouse.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card / Item 2: Prazos de Entrega -->
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <div class="faq-item-icon">
+              <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div>
+              <span class="faq-category">AGILIDADE COMPROVADA</span>
+              <h3 class="faq-question">Qual é o prazo médio de entrega do projeto?</h3>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Nossas Landing Pages são entregues com extrema rapidez: em média de <strong>24 a 48 horas</strong> úteis após a aprovação do briefing e alinhamento do material. Sites institucionais completos com múltiplas páginas possuem cronogramas calculados sob medida conforme a complexidade e volume de conteúdo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card / Item 3: Segurança Essencial -->
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <div class="faq-item-icon">
+              <i data-lucide="lock" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div>
+              <span class="faq-category">SEGURANÇA &amp; CONFIABILIDADE</span>
+              <h3 class="faq-question">Como funciona a segurança e o protocolo HTTPS?</h3>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Todos os nossos projetos contam com <strong>certificado SSL/HTTPS de ponta a ponta</strong> (o cadeado verde de segurança), carregamento seguro via redes de distribuição global (Edge CDN), código limpo sem plugins vulneráveis ou brechas de segurança, e sanitização nativa de formulários de contato.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card / Item 4: Hospedagem & Manutenção -->
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <div class="faq-item-icon">
+              <i data-lucide="server" style="width: 20px; height: 20px;"></i>
+            </div>
+            <div>
+              <span class="faq-category">ESTABILIDADE &amp; SUPORTE</span>
+              <h3 class="faq-question">Como funciona a hospedagem e a manutenção contínua?</h3>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Oferecemos planos de suporte contínuo para garantir <strong>estabilidade no ar de 99.9%</strong>, renovação técnica de domínio, backups e atualizações regulares de informações a partir de <strong>R$ 65,00/mês</strong> para landing pages e R$ 120,00/mês para sites institucionais completos. Você não precisa se preocupar com aspectos técnicos.
+            </p>
           </div>
         </div>
 
@@ -583,7 +632,7 @@
   </section>
 
   <!-- =========================================================================
-       SECTION: PORTFÓLIO & FEEDBACK DO CLIENTE
+       SECTION: PORTFÓLIO & FEEDBACK DO CLIENTE (Com Case EDI Estética Automotiva)
        ========================================================================= -->
   <section class="section-portfolio" id="portfolio">
     <div class="container">
@@ -595,20 +644,20 @@
           </div>
           <h2 class="portfolio-main-title">PORTFÓLIO</h2>
         </div>
-        <p style="max-width: 420px; font-size: 0.95rem; color: var(--pearl-muted);">
-          Casos reais projetados para posicionar marcas e converter visitas em contatos qualificados.
+        <p style="max-width: 440px; font-size: 0.95rem; color: var(--pearl-muted);">
+          Casos reais projetados para posicionar marcas e converter visitas em agendamentos e faturamento direto.
         </p>
       </div>
 
-      <!-- 4-Project Grid -->
+      <!-- 4-Project Grid: Case 01 EDI Estética Automotiva + 3 Próximos Projetos -->
       <div class="portfolio-grid">
         
-        <!-- Destaque 1: EDI Estética Automotiva -->
-        <article class="portfolio-card">
+        <!-- PROJETO 01: EDI Estética Automotiva (Herval d'Oeste - SC) -->
+        <article class="portfolio-card portfolio-featured-card">
           <div class="portfolio-media-box">
-            <img src="assets/images/edi_hero.jpg" alt="EDI Estética Automotiva">
+            <img src="assets/images/edi_hero.jpg" alt="EDI Estética Automotiva — Herval d'Oeste SC">
             <div class="portfolio-live-badge">
-              <span class="pulse-dot"></span> Online • Case Ativo
+              <span class="pulse-dot"></span> Online • Case Ativo 01/04
             </div>
           </div>
           <div class="portfolio-info">
@@ -617,36 +666,37 @@
                 <span class="portfolio-tag">Landing Page</span>
                 <span class="portfolio-tag">Alta Conversão</span>
                 <span class="portfolio-tag">Herval d'Oeste - SC</span>
+                <span class="portfolio-tag">Lighthouse 100/100</span>
               </div>
               <h3 class="portfolio-card-title" style="margin-top: 0.75rem;">
                 EDI Estética Automotiva
               </h3>
               <p class="portfolio-card-desc">
-                Página de alta conversão estruturada para captação de agendamentos de serviços automotivos premium (vitrificação, polimento e higienização).
+                Landing page de alta conversão estruturada para captação de agendamentos de serviços automotivos premium (vitrificação, polimento e higienização). Carregamento veloz (&lt; 0.9s) com botão direto de WhatsApp.
               </p>
             </div>
             <div>
-              <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-link-action">
-                <span>Acessar Site do Cliente</span>
+              <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-link-action" aria-label="Acessar site da EDI Estética Automotiva">
+                <span>Acessar Site do Cliente (ediesteticaautomotiva.com.br)</span>
                 <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- Slot 2: Barber Studio Classic -->
+        <!-- PROJETO 02: Barber Studio Exclusive (Placeholder 2/4) -->
         <article class="portfolio-card">
           <div class="portfolio-media-box">
-            <img src="assets/images/edi_luxury.jpg" alt="Barbearia Premium">
+            <img src="assets/images/edi_luxury.jpg" alt="Barber Studio Exclusive">
             <div class="portfolio-live-badge">
-              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Em Breve
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Projeto 02/04 • Em Breve
             </div>
           </div>
           <div class="portfolio-info">
             <div>
               <div class="portfolio-tags-row">
                 <span class="portfolio-tag">Site Institucional</span>
-                <span class="portfolio-tag">Agendamento</span>
+                <span class="portfolio-tag">Agendamento Online</span>
                 <span class="portfolio-tag">Design System</span>
               </div>
               <h3 class="portfolio-card-title" style="margin-top: 0.75rem;">
@@ -665,12 +715,12 @@
           </div>
         </article>
 
-        <!-- Slot 3: Clínica Médica & Bem-Estar -->
+        <!-- PROJETO 03: Clínica Integrada de Fisioterapia (Placeholder 3/4) -->
         <article class="portfolio-card">
           <div class="portfolio-media-box">
             <img src="assets/images/workspace_preview.png" alt="Clínica Médica e Fisioterapia">
             <div class="portfolio-live-badge">
-              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Em Breve
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Projeto 03/04 • Em Breve
             </div>
           </div>
           <div class="portfolio-info">
@@ -696,12 +746,12 @@
           </div>
         </article>
 
-        <!-- Slot 4: Plataforma SaaS & Digital -->
+        <!-- PROJETO 04: Nexus Business Automation (Placeholder 4/4) -->
         <article class="portfolio-card">
           <div class="portfolio-media-box">
-            <img src="assets/images/edi_studio.jpg" alt="Plataforma Digital">
+            <img src="assets/images/edi_studio.jpg" alt="Plataforma Digital Nexus">
             <div class="portfolio-live-badge">
-              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Em Breve
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--pearl-muted);"></span> Projeto 04/04 • Em Breve
             </div>
           </div>
           <div class="portfolio-info">
@@ -729,7 +779,7 @@
 
       </div>
 
-      <!-- Depoimento Dedicado de Cliente (Validação Real do Cliente Édipo) -->
+      <!-- Card de Validação Real do Cliente Édipo (Depoimento & Print Original) -->
       <div class="testimonial-feature-block">
         <div class="testimonial-left">
           
@@ -767,11 +817,12 @@
   </section>
 
   <!-- =========================================================================
-       SECTION: CONTATO & RODAPÉ (Limite Máximo de 2 Botões de WhatsApp)
+       SECTION: CONTATO & RODAPÉ REESTRUTURADO & ELEGANTE
        ========================================================================= -->
   <section class="section-contact" id="contato">
     <div class="container">
       
+      <!-- Banner Central de Contato (CTA Direta para WhatsApp) -->
       <div class="contact-card-banner">
         
         <div class="section-label">
@@ -796,50 +847,76 @@
           <span>Iniciar Conversa via WhatsApp</span>
         </a>
 
-        <!-- Contatos Diretos -->
-        <div class="contact-direct-links">
-          <a href="tel:+5549999708745">
-            <i data-lucide="phone" style="width: 15px; height: 15px; color: var(--ocean);"></i>
-            <span>(49) 99970-8745</span>
-          </a>
-          <a href="mailto:rvlldev.contato@gmail.com">
-            <i data-lucide="mail" style="width: 15px; height: 15px; color: var(--ocean);"></i>
-            <span>rvlldev.contato@gmail.com</span>
-          </a>
-          <a href="https://instagram.com/RvLL.Dev" target="_blank" rel="noopener noreferrer">
-            <i data-lucide="instagram" style="width: 15px; height: 15px; color: var(--ocean);"></i>
-            <span>@RvLL.Dev</span>
-          </a>
-          <span>
-            <i data-lucide="map-pin" style="width: 15px; height: 15px; color: var(--ocean);"></i>
-            <span>Santa Catarina, Brasil</span>
-          </span>
-        </div>
-
       </div>
 
-      <!-- Rodapé Institucional -->
+      <!-- Rodapé Reestruturado & Elegante (3 Colunas + Barra Inferior Divisória) -->
       <footer class="site-footer">
-        <div class="footer-brand">
-          <img src="assets/images/logo_rvll.jpg" alt="Logo RvLL.Dev" style="width: 24px; height: 24px; border-radius: 50%;">
-          <span>RvLL.Dev</span>
+        
+        <div class="footer-columns-grid">
+          
+          <!-- Coluna 1: Branding -->
+          <div class="footer-col footer-col-brand">
+            <div class="footer-brand-title">
+              <img src="assets/images/logo_rvll.jpg" alt="Logo RvLL.Dev" class="footer-brand-logo">
+              <span>RvLL<span>.Dev</span></span>
+            </div>
+            <p class="footer-brand-desc">
+              Estúdio de desenvolvimento web e design de interfaces sediado em Santa Catarina, atendendo empresas em todo o Brasil.
+            </p>
+          </div>
+
+          <!-- Coluna 2: Canais Oficiais -->
+          <div class="footer-col footer-col-channels">
+            <h4 class="footer-col-heading">Canais Oficiais</h4>
+            <ul class="footer-channels-list">
+              <li>
+                <a href="https://wa.me/5549999708745?text=Ol%C3%A1!+Vim+pelo+site+da+RvLL.Dev+e+gostaria+de+mais+informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="footer-channel-link">
+                  <i data-lucide="message-circle" style="width: 16px; height: 16px; color: var(--ocean);"></i>
+                  <span>WhatsApp: (49) 99970-8745</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:rvlldev.contato@gmail.com" class="footer-channel-link">
+                  <i data-lucide="mail" style="width: 16px; height: 16px; color: var(--ocean);"></i>
+                  <span>E-mail: rvlldev.contato@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/RvLL.Dev" target="_blank" rel="noopener noreferrer" class="footer-channel-link">
+                  <i data-lucide="instagram" style="width: 16px; height: 16px; color: var(--ocean);"></i>
+                  <span>Instagram: @RvLL.Dev</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Links Rápidos & Localização -->
+          <div class="footer-col footer-col-info">
+            <h4 class="footer-col-heading">Atendimento &amp; Localização</h4>
+            <div class="footer-location-box">
+              <div class="footer-info-row">
+                <i data-lucide="map-pin" style="width: 16px; height: 16px; color: var(--ocean);"></i>
+                <span>Santa Catarina, Brasil • Atendimento Nacional</span>
+              </div>
+              <div class="footer-info-row">
+                <i data-lucide="zap" style="width: 16px; height: 16px; color: var(--ocean);"></i>
+                <span>Landing Pages Express (24h a 48h)</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="footer-copyright">
-          © 2026 RvLL.Dev. Todos os direitos reservados. Design &amp; Tecnologia de Alta Performance.
+        <!-- Barra Inferior: Linha Sutil Divisória com Copyright -->
+        <div class="footer-bottom-bar">
+          <div class="footer-copyright">
+            © 2026 RvLL.Dev. Todos os direitos reservados.
+          </div>
+          <div class="footer-legal-tag">
+            Design &amp; Tecnologia de Alta Performance • Google Lighthouse 100
+          </div>
         </div>
 
-        <div class="footer-social-links">
-          <a href="https://instagram.com/RvLL.Dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram da RvLL.Dev">
-            <i data-lucide="instagram" style="width: 18px; height: 18px;"></i>
-          </a>
-          <a href="mailto:rvlldev.contato@gmail.com" aria-label="E-mail da RvLL.Dev">
-            <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
-          </a>
-          <a href="https://github.com/Ryan863/RvLL-Portf-lio" target="_blank" rel="noopener noreferrer" aria-label="Repositório GitHub">
-            <i data-lucide="github" style="width: 18px; height: 18px;"></i>
-          </a>
-        </div>
       </footer>
 
     </div>

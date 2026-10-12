@@ -144,42 +144,22 @@ function initGSAPAnimations() {
     delay: 0.2
   });
 
-  // Hero Top Elements Reveal
-  gsap.from('.hero-top-grid > *', {
-    y: 20,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.12,
-    ease: 'power2.out',
-    delay: 0.3
-  });
-
   // Hero Central Value Block Reveal
   gsap.from('.hero-central-block', {
-    y: 40,
+    y: 35,
     opacity: 0,
     duration: 1,
     ease: 'power3.out',
-    delay: 0.45
-  });
-
-  // Hero Lateral Case Card Reveal
-  gsap.from('.hero-floating-case-card', {
-    scale: 0.95,
-    opacity: 0,
-    y: 30,
-    duration: 0.9,
-    ease: 'power3.out',
-    delay: 0.6
+    delay: 0.35
   });
 
   // Hero Massive Title ("RvLL.Dev") Bridge Animation
   gsap.from('.hero-massive-title', {
-    y: 50,
+    y: 40,
     opacity: 0,
     duration: 1.1,
     ease: 'power4.out',
-    delay: 0.7
+    delay: 0.55
   });
 
   if (typeof ScrollTrigger === 'undefined') return;
@@ -211,18 +191,32 @@ function initGSAPAnimations() {
     ease: 'power2.out'
   });
 
-  // Process Section Staggered Reveal
-  gsap.from('.process-card', {
+  // Benefits Section Staggered Reveal
+  gsap.from('.benefit-card', {
     scrollTrigger: {
-      trigger: '.process-grid',
+      trigger: '.benefits-grid',
       start: 'top 75%',
       toggleActions: 'play none none none'
     },
-    y: 50,
+    y: 40,
     opacity: 0,
-    duration: 0.9,
-    stagger: 0.2,
+    duration: 0.85,
+    stagger: 0.15,
     ease: 'power3.out'
+  });
+
+  // FAQ Items Staggered Reveal
+  gsap.from('.faq-item', {
+    scrollTrigger: {
+      trigger: '.faq-grid',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'power2.out'
   });
 
   // Pricing Cards Reveal
