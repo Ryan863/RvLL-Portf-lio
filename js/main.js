@@ -169,145 +169,29 @@ function initGSAPAnimations() {
 
   if (typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Atualiza cálculos do ScrollTrigger dinamicamente em qualquer alteração de zoom ou resize
+    window.addEventListener('resize', () => {
+      ScrollTrigger.refresh();
+    });
   }
 
-  // Floating Pill Nav Entrance
-  gsap.from('.floating-pill-nav', {
-    y: -50,
-    opacity: 0,
-    duration: 1,
-    ease: 'power3.out',
-    delay: 0.2
-  });
-
-  // Hero Central Value Block Reveal
+  // Floating Pill Nav: mantido estável via CSS sem deslocamento destrutivo de transform
+  // Hero Elements: animações sutis de entrada com limpeza imediata de propriedades (clearProps)
   gsap.from('.hero-central-block', {
-    y: 35,
-    opacity: 0,
-    duration: 1,
-    ease: 'power3.out',
-    delay: 0.35
-  });
-
-  // Hero Massive Title ("RvLL.Dev") Bridge Animation
-  gsap.from('.hero-massive-title', {
-    y: 40,
-    opacity: 0,
-    duration: 1.1,
-    ease: 'power4.out',
-    delay: 0.55
-  });
-
-  if (typeof ScrollTrigger === 'undefined') return;
-
-  // About Section Typography Reveal
-  gsap.from('.about-statement', {
-    scrollTrigger: {
-      trigger: '.section-about',
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: 'power3.out'
-  });
-
-  // About Info Cards
-  gsap.from('.about-info-card', {
-    scrollTrigger: {
-      trigger: '.about-details-row',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    y: 30,
-    opacity: 0,
+    y: 15,
     duration: 0.8,
-    stagger: 0.15,
-    ease: 'power2.out'
-  });
-
-  // Benefits Section Staggered Reveal (Sem esconder os cartões)
-  gsap.from('.benefit-card', {
-    scrollTrigger: {
-      trigger: '.benefits-grid',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    },
-    y: 20,
-    duration: 0.6,
-    stagger: 0.1,
     ease: 'power2.out',
+    delay: 0.1,
     clearProps: 'transform'
   });
 
-  // FAQ Accordion Items Reveal
-  gsap.from('.faq-accordion-item', {
-    scrollTrigger: {
-      trigger: '.faq-accordion-container',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    y: 25,
-    opacity: 0,
-    duration: 0.7,
-    stagger: 0.12,
-    ease: 'power2.out'
-  });
-
-  // Pricing Cards Reveal
-  gsap.from('.pricing-card-wrap', {
-    scrollTrigger: {
-      trigger: '.pricing-grid',
-      start: 'top 75%',
-      toggleActions: 'play none none none'
-    },
-    y: 40,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: 'power3.out'
-  });
-
-  // Portfolio Grid Reveal
-  gsap.from('.portfolio-card', {
-    scrollTrigger: {
-      trigger: '.portfolio-grid',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    y: 40,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: 'power2.out'
-  });
-
-  // Dedicated Testimonial Card Reveal
-  gsap.from('.testimonial-centered-card', {
-    scrollTrigger: {
-      trigger: '.section-testimonials',
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-    },
-    scale: 0.96,
-    opacity: 0,
-    y: 30,
-    duration: 1,
-    ease: 'power3.out'
-  });
-
-  // Contact Banner Reveal
-  gsap.from('.contact-card-banner', {
-    scrollTrigger: {
-      trigger: '.contact-card-banner',
-      start: 'top 85%',
-      toggleActions: 'play none none none'
-    },
-    y: 40,
-    opacity: 0,
+  gsap.from('.hero-massive-title', {
+    y: 15,
     duration: 0.9,
-    ease: 'power3.out'
+    ease: 'power2.out',
+    delay: 0.2,
+    clearProps: 'transform'
   });
 }
 

@@ -58,8 +58,8 @@
   <!-- =========================================================================
        HEADER & FLOATING PILL NAVBAR (Estilo NOVASITE Translúcido)
        ========================================================================= -->
-  <header class="header-wrapper fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center pointer-events-none" id="site-header">
-    <nav class="floating-pill-nav py-2.5 px-6 items-center flex pointer-events-auto" aria-label="Navegação Principal">
+  <header class="header-wrapper" id="site-header">
+    <nav class="floating-pill-nav" aria-label="Navegação Principal">
       
       <!-- Brand Logo / Name -->
       <a href="#hero" class="nav-brand" aria-label="RvLL.Dev Início">
@@ -664,32 +664,49 @@
         <article class="portfolio-card portfolio-featured-card">
           <div class="portfolio-media-box">
             <img src="assets/images/edi_hero.jpg" alt="EDI Estética Automotiva — Herval d'Oeste SC">
+            <div class="portfolio-media-overlay"></div>
+            
             <div class="portfolio-live-badge">
-              <span class="pulse-dot"></span> Desenvolvido por RvLL.Dev • Case Ativo
+              <span class="pulse-dot"></span> Projeto no Ar • Herval d'Oeste SC
             </div>
-            <div class="portfolio-logo-watermark">
-              <img src="assets/images/logo_edi.png" alt="Logo EDI Estética Automotiva">
+
+            <!-- Destaque Central: Logo Oficial EDI Estética Automotiva -->
+            <div class="portfolio-showcase-center">
+              <div class="portfolio-brand-emblem">
+                <img src="assets/images/logo_edi.png" alt="Logo Oficial EDI Estética Automotiva" class="portfolio-edi-logo-img">
+              </div>
+            </div>
+
+            <!-- Selo de Domínio Oficial -->
+            <div class="portfolio-domain-tag">
+              <i data-lucide="shield-check" style="width: 13px; height: 13px; color: #5B88B2;"></i>
+              <span>ediesteticaautomotiva.com.br</span>
             </div>
           </div>
+
           <div class="portfolio-info">
             <div>
               <div class="portfolio-tags-row">
-                <span class="portfolio-tag">Case 01</span>
-                <span class="portfolio-tag">Herval d'Oeste - SC</span>
-                <span class="portfolio-tag">Landing Page</span>
+                <span class="portfolio-tag portfolio-tag-featured">★ Case Ativo SC</span>
+                <span class="portfolio-tag">Landing Page de Alta Conversão</span>
+                <span class="portfolio-tag">Estética Automotiva</span>
                 <span class="portfolio-tag">Lighthouse 100/100</span>
               </div>
               <h3 class="portfolio-card-title" style="margin-top: 0.75rem;">
                 EDI Estética Automotiva
               </h3>
               <p class="portfolio-card-desc">
-                Landing page focada em captação de clientes para detalhamento automotivo, velocidade máxima no mobile e integração de agendamento via WhatsApp.
+                Landing page completa de alta performance desenvolvida pela <strong>RvLL.Dev</strong> para o estúdio de estética automotiva e polimento técnico em Herval d'Oeste - SC. Desenvolvida para captar clientes qualificados, com carregamento abaixo de 1 segundo e integração direta para agendamentos via WhatsApp.
               </p>
             </div>
-            <div>
+            <div class="portfolio-card-actions">
               <a href="https://ediesteticaautomotiva.com.br" target="_blank" rel="noopener noreferrer" class="portfolio-btn-visit" aria-label="Acessar Site Oficial EDI Estética Automotiva">
                 <span>Acessar Site Oficial ↗</span>
-                <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                <i data-lucide="external-link" style="width: 15px; height: 15px;"></i>
+              </a>
+              <a href="#depoimento" class="portfolio-btn-depoimento" aria-label="Ver Depoimento do Proprietário da EDI">
+                <i data-lucide="message-square" style="width: 15px; height: 15px;"></i>
+                <span>Ver Depoimento do Cliente</span>
               </a>
             </div>
           </div>
@@ -820,7 +837,7 @@
           </blockquote>
 
           <div class="testimonial-author-meta">
-            <img src="assets/images/logo_rvll.jpg" alt="Édipo - EDI Estética Automotiva" class="testimonial-avatar">
+            <img src="assets/images/logo_edi.png" alt="Édipo — EDI Estética Automotiva" class="testimonial-avatar" style="object-fit: contain; background: #000; padding: 2px;">
             <div class="testimonial-author-info">
               <div class="testimonial-author-name">Édipo</div>
               <div class="testimonial-author-role">Proprietário da EDI Estética Automotiva • Herval d'Oeste - SC</div>
