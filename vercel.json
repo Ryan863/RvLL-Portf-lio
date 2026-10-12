@@ -1,14 +1,11 @@
 {
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/google2b415168a9d725f3.html",
-      "destination": "/google2b415168a9d725f3.html"
-    },
-    {
-      "source": "/google2b415168a9d725f3",
-      "destination": "/google2b415168a9d725f3.html"
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [
