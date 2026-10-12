@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initVideoAutoplay();
   initMobileNav();
   initSpotlightHover();
+  initFAQAccordion();
   initLightbox();
   initGSAPAnimations();
   initActiveNavOnScroll();
@@ -82,6 +83,41 @@ function initSpotlightHover() {
 
     card.addEventListener('mouseleave', () => {
       card.style.setProperty('--mouse-opacity', '0');
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   3.5. Interactive FAQ Accordion
+   -------------------------------------------------------------------------- */
+function initFAQAccordion() {
+  const accordionItems = document.querySelectorAll('.faq-accordion-item');
+  if (!accordionItems.length) return;
+
+  accordionItems.forEach(item => {
+    const trigger = item.querySelector('.faq-accordion-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Fecha outros itens para comportamento de acordeão limpo
+      accordionItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherTrigger = otherItem.querySelector('.faq-accordion-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Alterna o estado do item clicado
+      if (isActive) {
+        item.classList.remove('active');
+        trigger.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 }
@@ -205,17 +241,17 @@ function initGSAPAnimations() {
     ease: 'power3.out'
   });
 
-  // FAQ Items Staggered Reveal
-  gsap.from('.faq-item', {
+  // FAQ Accordion Items Reveal
+  gsap.from('.faq-accordion-item', {
     scrollTrigger: {
-      trigger: '.faq-grid',
+      trigger: '.faq-accordion-container',
       start: 'top 80%',
       toggleActions: 'play none none none'
     },
-    y: 30,
+    y: 25,
     opacity: 0,
-    duration: 0.8,
-    stagger: 0.15,
+    duration: 0.7,
+    stagger: 0.12,
     ease: 'power2.out'
   });
 
@@ -247,15 +283,16 @@ function initGSAPAnimations() {
     ease: 'power2.out'
   });
 
-  // Testimonial Banner Reveal
-  gsap.from('.testimonial-feature-block', {
+  // Dedicated Testimonial Card Reveal
+  gsap.from('.testimonial-centered-card', {
     scrollTrigger: {
-      trigger: '.testimonial-feature-block',
+      trigger: '.section-testimonials',
       start: 'top 80%',
       toggleActions: 'play none none none'
     },
     scale: 0.96,
     opacity: 0,
+    y: 30,
     duration: 1,
     ease: 'power3.out'
   });
