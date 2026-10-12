@@ -227,18 +227,18 @@ function initGSAPAnimations() {
     ease: 'power2.out'
   });
 
-  // Benefits Section Staggered Reveal
+  // Benefits Section Staggered Reveal (Sem esconder os cartões)
   gsap.from('.benefit-card', {
     scrollTrigger: {
       trigger: '.benefits-grid',
-      start: 'top 75%',
+      start: 'top 85%',
       toggleActions: 'play none none none'
     },
-    y: 40,
-    opacity: 0,
-    duration: 0.85,
-    stagger: 0.15,
-    ease: 'power3.out'
+    y: 20,
+    duration: 0.6,
+    stagger: 0.1,
+    ease: 'power2.out',
+    clearProps: 'transform'
   });
 
   // FAQ Accordion Items Reveal

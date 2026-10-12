@@ -58,8 +58,8 @@
   <!-- =========================================================================
        HEADER & FLOATING PILL NAVBAR (Estilo NOVASITE Translúcido)
        ========================================================================= -->
-  <header class="header-wrapper" id="site-header">
-    <nav class="floating-pill-nav" aria-label="Navegação Principal">
+  <header class="header-wrapper fixed top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center pointer-events-none" id="site-header">
+    <nav class="floating-pill-nav py-2.5 px-6 items-center flex pointer-events-auto" aria-label="Navegação Principal">
       
       <!-- Brand Logo / Name -->
       <a href="#hero" class="nav-brand" aria-label="RvLL.Dev Início">
@@ -260,36 +260,34 @@
         </p>
       </div>
 
-      <!-- Grade de 3 Colunas de Impacto -->
-      <div class="benefits-grid">
+      <!-- Grelha de 3 Cartões de Valor Obrigatórios -->
+      <div class="benefits-grid grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl mx-auto my-10">
         
-        <!-- Card 1: Conversão Direta -->
-        <div class="benefit-card">
+        <!-- Card 1: Conversão e Foco em Vendas -->
+        <div class="benefit-card bg-[#122C4F]/20 backdrop-blur-md border border-[#5B88B2]/20 rounded-2xl p-6">
           <div class="benefit-icon-badge">
-            <i data-lucide="target" style="width: 26px; height: 26px; color: var(--pearl);"></i>
+            <i data-lucide="target" style="width: 26px; height: 26px; color: #FBF9E4;"></i>
           </div>
           <div class="benefit-card-content">
-            <span class="benefit-num">01 / CONVERSÃO</span>
-            <h3 class="benefit-card-title">Conversão Direta</h3>
+            <h3 class="benefit-card-title" style="color: #FBF9E4;">Foco Total em Vendas</h3>
             <p class="benefit-card-desc">
-              Páginas desenhadas com psicologia de consumo para transformar cliques em chamados no WhatsApp.
+              Estrutura desenhada para transformar tráfego em contactos qualificados, conduzindo o cliente diretamente ao WhatsApp ou checkout.
             </p>
           </div>
           <div class="benefit-tag-pill">
-            <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> Funil Direto &amp; Objetivo
+            <i data-lucide="trending-up" style="width: 14px; height: 14px;"></i> Conversão &amp; Vendas
           </div>
         </div>
 
-        <!-- Card 2: Retenção & Velocidade -->
-        <div class="benefit-card">
+        <!-- Card 2: Velocidade e Carregamento Extremo -->
+        <div class="benefit-card bg-[#122C4F]/20 backdrop-blur-md border border-[#5B88B2]/20 rounded-2xl p-6">
           <div class="benefit-icon-badge">
-            <i data-lucide="timer" style="width: 26px; height: 26px; color: var(--pearl);"></i>
+            <i data-lucide="timer" style="width: 26px; height: 26px; color: #FBF9E4;"></i>
           </div>
           <div class="benefit-card-content">
-            <span class="benefit-num">02 / VELOCIDADE</span>
-            <h3 class="benefit-card-title">Retenção &amp; Velocidade</h3>
+            <h3 class="benefit-card-title" style="color: #FBF9E4;">Retenção e Velocidade</h3>
             <p class="benefit-card-desc">
-              Carregamento em frações de segundo para não perder clientes no tráfego pago ou orgânico.
+              Páginas ultra-otimizadas com abertura em menos de 1 segundo. Evite perder visitantes móveis para a concorrência devido à lentidão.
             </p>
           </div>
           <div class="benefit-tag-pill">
@@ -297,20 +295,19 @@
           </div>
         </div>
 
-        <!-- Card 3: Autoridade Incontestável -->
-        <div class="benefit-card">
+        <!-- Card 3: Autoridade e Posicionamento -->
+        <div class="benefit-card bg-[#122C4F]/20 backdrop-blur-md border border-[#5B88B2]/20 rounded-2xl p-6">
           <div class="benefit-icon-badge">
-            <i data-lucide="shield-check" style="width: 26px; height: 26px; color: var(--pearl);"></i>
+            <i data-lucide="shield-check" style="width: 26px; height: 26px; color: #FBF9E4;"></i>
           </div>
           <div class="benefit-card-content">
-            <span class="benefit-num">03 / AUTORIDADE</span>
-            <h3 class="benefit-card-title">Autoridade Incontestável</h3>
+            <h3 class="benefit-card-title" style="color: #FBF9E4;">Autoridade Imediata</h3>
             <p class="benefit-card-desc">
-              Design exclusivo que diferencia sua marca de amadores e permite cobrar preços maiores.
+              Design profissional de elevado padrão que transmite credibilidade instantânea, permitindo cobrar valores superiores pelos seus serviços.
             </p>
           </div>
           <div class="benefit-tag-pill">
-            <i data-lucide="award" style="width: 14px; height: 14px;"></i> Alto Valor Percebido
+            <i data-lucide="award" style="width: 14px; height: 14px;"></i> Alto Padrão &amp; Confiança
           </div>
         </div>
 
