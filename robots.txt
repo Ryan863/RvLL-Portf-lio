@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Bloqueio de diretórios internos e de configuração (caso existam no servidor)
+Disallow: /.git/
+Disallow: /.vercel/
+Disallow: /node_modules/
+
+# Sitemap Oficial
+Sitemap: https://rvll-portfolio.vercel.app/sitemap.xml
