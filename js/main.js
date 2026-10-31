@@ -21,27 +21,42 @@ window.addEventListener('resize', updateAppHeight, { passive: true });
 window.addEventListener('orientationchange', updateAppHeight, { passive: true });
 
 /* --------------------------------------------------------------------------
-   1. Video Autoplay Assurance & Fallback
+   1. Video Autoplay Assurance & Responsive Video Sync (Mobile / Desktop)
    -------------------------------------------------------------------------- */
 function initVideoAutoplay() {
-  const videos = document.querySelectorAll('video');
-  videos.forEach(video => {
-    video.muted = true;
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(error => {
-        // Autoplay policy prevented playback, ensure muted & retry on interaction
-        console.warn('Video autoplay deferred:', error);
-        const retryPlay = () => {
-          video.play();
-          window.removeEventListener('click', retryPlay);
-          window.removeEventListener('touchstart', retryPlay);
-        };
-        window.addEventListener('click', retryPlay, { once: true });
-        window.addEventListener('touchstart', retryPlay, { once: true });
-      });
+  const mobileVideo = document.getElementById('hero-video-mobile');
+  const desktopVideo = document.getElementById('hero-video-desktop');
+
+  function syncActiveVideo() {
+    const isMobile = window.innerWidth <= 768;
+    const activeVideo = isMobile ? mobileVideo : desktopVideo;
+    const inactiveVideo = isMobile ? desktopVideo : mobileVideo;
+
+    if (inactiveVideo && !inactiveVideo.paused) {
+      inactiveVideo.pause();
     }
-  });
+
+    if (activeVideo) {
+      activeVideo.muted = true;
+      const playPromise = activeVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn('Video autoplay deferred:', error);
+          const retryPlay = () => {
+            activeVideo.play().catch(() => {});
+            window.removeEventListener('click', retryPlay);
+            window.removeEventListener('touchstart', retryPlay);
+          };
+          window.addEventListener('click', retryPlay, { once: true });
+          window.addEventListener('touchstart', retryPlay, { once: true });
+        });
+      }
+    }
+  }
+
+  syncActiveVideo();
+  window.addEventListener('resize', syncActiveVideo, { passive: true });
+  window.addEventListener('orientationchange', syncActiveVideo, { passive: true });
 }
 
 /* --------------------------------------------------------------------------

@@ -70,8 +70,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <!-- Main Stylesheet (com cache-busting v=2.5 para navegadores in-app) -->
-  <link rel="stylesheet" href="css/style.css?v=2.5">
+  <!-- Main Stylesheet (com cache-busting v=2.6 para navegadores in-app) -->
+  <link rel="stylesheet" href="css/style.css?v=2.6">
 
   <!-- Critical Inlined CSS para Mobile e In-App Browsers (Instagram/iOS) -->
   <style>
@@ -279,19 +279,30 @@
        ========================================================================= -->
   <section class="hero-section" id="hero">
     
-    <!-- Background Video com Autoplay Obrigatório e Suporte Mobile/Desktop -->
+    <!-- Background Video Responsivo (Vídeo Vertical para Mobile e Horizontal para Desktop) -->
     <video
       autoplay
       loop
       muted
       playsinline
       preload="auto"
-      class="hero-bg-video absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-      id="hero-video"
+      class="hero-bg-video hero-video-mobile"
+      id="hero-video-mobile"
+      aria-hidden="true"
     >
-      <!-- Para mobile -->
-      <source src="videoinicialmobile.mp4" type="video/mp4" media="(max-width: 768px)" />
-      <!-- Para desktop -->
+      <source src="videoinicialmobile.mp4" type="video/mp4" />
+    </video>
+
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      class="hero-bg-video hero-video-desktop"
+      id="hero-video-desktop"
+      aria-hidden="true"
+    >
       <source src="videoinicial.mp4" type="video/mp4" />
     </video>
 
@@ -1153,8 +1164,8 @@
     lucide.createIcons();
   </script>
 
-  <!-- Main JavaScript File -->
-  <script src="js/main.js"></script>
+  <!-- Main JavaScript File (v=2.6) -->
+  <script src="js/main.js?v=2.6"></script>
 
 </body>
 </html>
