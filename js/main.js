@@ -4,10 +4,14 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
   updateAppHeight();
   initVideoAutoplay();
   initMobileNav();
   initSpotlightHover();
+  initProposalSelector();
   initFAQAccordion();
   initLightbox();
   initGSAPAnimations();
@@ -105,6 +109,33 @@ function initSpotlightHover() {
 
     card.addEventListener('mouseleave', () => {
       card.style.setProperty('--mouse-opacity', '0');
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   3.4. Interactive Proposal Type Selector (WhatsApp Auto-Configurator)
+   -------------------------------------------------------------------------- */
+function initProposalSelector() {
+  const chips = document.querySelectorAll('.proposal-chip');
+  const ctaBtn = document.getElementById('proposal-whatsapp-btn');
+  if (!chips.length || !ctaBtn) return;
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const customMsg = chip.getAttribute('data-msg');
+      if (customMsg) {
+        ctaBtn.href = `https://wa.me/5549999708745?text=${customMsg}`;
+      }
+
+      // Micro-animação tátil de clique
+      ctaBtn.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        ctaBtn.style.transform = '';
+      }, 150);
     });
   });
 }

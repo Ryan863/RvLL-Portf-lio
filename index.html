@@ -43,7 +43,7 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -70,8 +70,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <!-- Main Stylesheet (com cache-busting v=2.6 para navegadores in-app) -->
-  <link rel="stylesheet" href="css/style.css?v=2.6">
+  <!-- Main Stylesheet (com cache-busting v=2.7 para navegadores in-app) -->
+  <link rel="stylesheet" href="css/style.css?v=2.7">
 
   <!-- Critical Inlined CSS para Mobile e In-App Browsers (Instagram/iOS) -->
   <style>
@@ -246,7 +246,7 @@
           <a href="#portfolio">Portfólio</a>
         </li>
         <li class="nav-item">
-          <a href="#precos">Preços</a>
+          <a href="#proposta">Proposta</a>
         </li>
       </ul>
 
@@ -269,7 +269,7 @@
       <li><a href="#hero">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#portfolio">Portfólio</a></li>
-      <li><a href="#precos">Preços</a></li>
+      <li><a href="#proposta">Proposta</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
   </div>
@@ -324,8 +324,8 @@
           </p>
 
           <div class="hero-cta-group">
-            <a href="#precos" class="hero-btn-primary" aria-label="Ver Planos e Preços">
-              <span>Ver Planos &amp; Preços</span>
+            <a href="#proposta" class="hero-btn-primary" aria-label="Solicitar Proposta Sob Medida">
+              <span>Solicitar Proposta</span>
               <i data-lucide="arrow-down" style="width: 17px; height: 17px;"></i>
             </a>
             <a href="#portfolio" class="hero-btn-secondary" aria-label="Conhecer Portfólio de Projetos">
@@ -586,7 +586,7 @@
           </button>
           <div class="faq-accordion-content">
             <div class="faq-accordion-body">
-              Garantimos <strong>estabilidade no ar de 99.9%</strong>, renovação técnica de domínio, backups contínuos e suporte técnico regular a partir de <strong>R$ 65,00/mês</strong> para landing pages e R$ 120,00/mês para sites institucionais completos. Você foca nas suas vendas enquanto cuidamos de toda a infraestrutura técnica.
+              Garantimos <strong>estabilidade no ar de 99.9%</strong>, renovação técnica de domínio, backups contínuos e suporte técnico dedicado. Toda a estrutura de hospedagem e manutenção é detalhada de forma transparente na sua proposta sob medida, sem cobranças inesperadas.
             </div>
           </div>
         </div>
@@ -617,198 +617,144 @@
   </section>
 
   <!-- =========================================================================
-       SECTION: PREÇOS (Arquitetura 21st.dev & Spotlight Cards)
+       SECTION: PROPOSTA PERSONALIZADA & CONSULTORIA ÁGIL (Substitui Tabela de Preços)
        ========================================================================= -->
-  <section class="section-pricing" id="precos">
+  <section class="section-proposal" id="proposta">
+    <!-- Âncora de compatibilidade para links legados #precos -->
+    <span id="precos" style="position: absolute; top: -80px; visibility: hidden; pointer-events: none;"></span>
+
     <div class="container">
       
-      <div class="pricing-header">
+      <div class="proposal-header">
         <div class="section-label">
-          <span>•</span> INVESTIMENTO TRANSPARENTE
+          <span>•</span> PROPOSTA PERSONALIZADA &amp; CONSULTORIA ÁGIL
         </div>
-        <h2 class="pricing-title">Planos Estruturados para Cada Momento</h2>
-        <p class="pricing-subtitle">
-          Sem custos ocultos. Soluções pensadas para gerar retorno real sobre o investimento desde o primeiro visitante.
+        <h2 class="proposal-title">
+          Precisa de uma landing page ou site sob medida?
+        </h2>
+        <p class="proposal-subtitle">
+          Conte sobre sua ideia, empresa ou nicho de atuação. Analisamos seus objetivos e enviamos uma proposta técnica clara, detalhada e sem qualquer compromisso em até poucas horas.
         </p>
       </div>
 
-      <div class="pricing-grid">
+      <!-- Bento Grid Interativo 21st.dev -->
+      <div class="proposal-bento-grid">
         
-        <!-- PLANO 1: LANDING PAGE BÁSICA (MAIS RECOMENDADA) — Com Aceternity Radiant Moving Glow -->
-        <div class="pricing-card-wrap">
-          <div class="radiant-glow-card">
-            <div class="pricing-card-inner">
-              
-              <div>
-                <span class="pricing-badge-popular">
-                  <i data-lucide="star" style="width: 13px; height: 13px; fill: currentColor;"></i>
-                  MAIS RECOMENDADA
-                </span>
+        <!-- CARD 1 (ESQUERDA): Seletor Interativo de Projeto & CTA Direto de WhatsApp -->
+        <div class="proposal-action-card">
+          <div>
+            <div class="proposal-card-top-badge">
+              <span class="badge-pulse-dot"></span>
+              <span>ATENDIMENTO DIRETO • RESPOSTA EM POUCAS HORAS</span>
+            </div>
 
-                <div class="pricing-card-header">
-                  <h3>Landing Page Básica</h3>
-                  <p>Ideal para campanhas, lançamentos de produtos e vendas diretas com alta taxa de conversão.</p>
-                </div>
+            <h3 class="proposal-step-title">
+              Como você prefere iniciar seu projeto?
+            </h3>
+            <p class="proposal-step-desc">
+              Selecione o tipo de solução que sua empresa precisa hoje para gerar uma conversa imediata e personalizada com nosso desenvolvedor:
+            </p>
 
-                <div class="pricing-price-box">
-                  <div class="pricing-amount">
-                    <span>R$</span> 549,00
-                  </div>
-                  <div class="pricing-cadence">à vista no lançamento</div>
-                  <div style="font-size: 0.82rem; color: var(--pearl-muted); margin-top: 0.2rem;">
-                    Hospedagem &amp; Domínio: <strong style="color: var(--pearl);">R$ 65,00/mês</strong>
-                  </div>
-                </div>
+            <!-- Seletor Interativo de Chips -->
+            <span class="proposal-chips-label">Selecione o tipo de projeto:</span>
+            <div class="proposal-chips-grid">
+              <button type="button" class="proposal-chip active" data-type="landing-page" data-msg="Ol%C3%A1%20Ryan!%20Preciso%20de%20uma%20Landing%20Page%20de%20alta%20convers%C3%A3o%20para%20o%20meu%20neg%C3%B3cio.%20Podemos%20conversar%20sobre%20uma%20proposta%3F">
+                <i data-lucide="zap" style="width: 15px; height: 15px;"></i>
+                <span>Landing Page de Alta Conversão</span>
+              </button>
 
-                <ul class="pricing-features-list">
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>Página única com copy persuasiva e foco em conversão</span>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>Entrega rápida em <strong>24h a 48 horas</strong></span>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>100% responsiva (Desktop, Tablet e Mobile)</span>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>Integração direta com WhatsApp comercial</span>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>Certificado de segurança SSL (HTTPS) incluso</span>
-                  </li>
-                  <li>
-                    <span class="check-icon">✓</span>
-                    <span>Carregamento ultra-rápido (&lt; 1.0s)</span>
-                  </li>
-                </ul>
+              <button type="button" class="proposal-chip" data-type="institucional" data-msg="Ol%C3%A1%20Ryan!%20Preciso%20de%20um%20Site%20Institucional%20completo%20para%20minha%20empresa.%20Gostaria%20de%20receber%20uma%20proposta.">
+                <i data-lucide="globe" style="width: 15px; height: 15px;"></i>
+                <span>Site Institucional Completo</span>
+              </button>
+
+              <button type="button" class="proposal-chip" data-type="catalogo" data-msg="Ol%C3%A1%20Ryan!%20Gostaria%20de%20um%20site%20com%20cat%C3%A1logo%20ou%20agendamentos%20online.%20Como%20funciona%20a%20proposta%3F">
+                <i data-lucide="calendar" style="width: 15px; height: 15px;"></i>
+                <span>Catálogo / Agendamentos</span>
+              </button>
+
+              <button type="button" class="proposal-chip" data-type="redesign" data-msg="Ol%C3%A1%20Ryan!%20J%C3%A1%20tenho%20um%20site%20mas%20quero%20um%20redesign%20moderno%20e%20mais%20r%C3%A1pido.%20Podemos%20avaliar%3F">
+                <i data-lucide="refresh-cw" style="width: 15px; height: 15px;"></i>
+                <span>Redesign &amp; Otimização</span>
+              </button>
+
+              <button type="button" class="proposal-chip" data-type="custom" data-msg="Ol%C3%A1%20Ryan!%20Tenho%20uma%20ideia%20de%20projeto%20sob%20medida%20e%20gostaria%20de%20um%20or%C3%A7amento%20personalizado.">
+                <i data-lucide="code-2" style="width: 15px; height: 15px;"></i>
+                <span>Projeto Customizado / Web App</span>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <!-- Botão Automatizado de WhatsApp -->
+            <a id="proposal-whatsapp-btn" 
+               href="https://wa.me/5549999708745?text=Ol%C3%A1%20Ryan!%20Preciso%20de%20uma%20Landing%20Page%20de%20alta%20convers%C3%A3o%20para%20o%20meu%20neg%C3%B3cio.%20Podemos%20conversar%20sobre%20uma%20proposta%3F" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="proposal-main-cta-btn" 
+               aria-label="Receber Proposta Personalizada no WhatsApp">
+              <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
+              <span>Receber Minha Proposta no WhatsApp</span>
+              <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+            </a>
+
+            <!-- Linha de Confiança -->
+            <div class="proposal-trust-row">
+              <div class="proposal-trust-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Sem compromisso financeiro</span>
               </div>
-
-              <!-- BOTÃO 1 OFICIAL DE WHATSAPP (PLANO LANDING PAGE) -->
-              <a href="https://wa.me/5549999708745?text=Ol%C3%A1!+Tenho+interesse+no+desenvolvimento+de+uma+Landing+Page+com+a+RvLL.Dev.+Podemos+conversar%3F" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="pricing-btn-primary" 
-                 aria-label="Contratar Plano Landing Page Básica pelo WhatsApp">
-                <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i>
-                <span>Garantir Minha Landing Page</span>
-              </a>
-
+              <div class="proposal-trust-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Resposta no mesmo dia</span>
+              </div>
+              <div class="proposal-trust-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Atendimento direto com Ryan</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- PLANO 2: SITE INSTITUCIONAL COMPLETO — 21st.dev Spotlight Card -->
-        <div class="pricing-card-wrap">
-          <div class="spotlight-card">
-            
-            <div>
-              <div class="pricing-card-header">
-                <h3>Site Institucional Completo</h3>
-                <p>Para empresas consolidadas que precisam de catálogo, páginas estruturadas e autoridade de marca.</p>
-              </div>
-
-              <div class="pricing-price-box">
-                <div class="pricing-amount">
-                  <span>R$</span> 850,00
-                </div>
-                <div class="pricing-cadence">à vista no lançamento</div>
-                <div style="font-size: 0.82rem; color: var(--pearl-muted); margin-top: 0.2rem;">
-                  Mensalidade &amp; Suporte: <strong style="color: var(--pearl);">R$ 120,00/mês</strong>
-                </div>
-              </div>
-
-              <ul class="pricing-features-list">
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Múltiplas páginas estruturadas (Início, Sobre, Serviços, Contato)</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Catálogo de serviços e galeria interativa</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>SEO Local avançado (Google Meu Negócio &amp; Schema.org)</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Formulário de contato + Integração WhatsApp</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Suporte prioritário e manutenção mensal</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Hospedagem de alto desempenho inclusa</span>
-                </li>
-              </ul>
+        <!-- CARD 2 (DIREITA): O Que Está Incluso & Transparência do Processo -->
+        <div class="proposal-benefits-card">
+          <div>
+            <div class="proposal-benefits-header">
+              <h3>O que você recebe na proposta:</h3>
+              <p>Etapas claras e alinhamento transparente antes de iniciar qualquer linha de código.</p>
             </div>
 
-            <!-- Botão de Solicitação Institucional (Direciona para Contato) -->
-            <a href="#contato" class="pricing-btn-secondary" aria-label="Solicitar Site Institucional Completo">
-              <span>Solicitar Site Institucional</span>
-              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-            </a>
-
+            <ul class="proposal-timeline-list">
+              <li class="proposal-timeline-item">
+                <div class="proposal-timeline-num">01</div>
+                <div class="proposal-timeline-content">
+                  <h4>Diagnóstico &amp; Alinhamento</h4>
+                  <p>Avaliamos seu segmento, público-alvo e definimos os pontos de conversão para transformar visitantes em clientes.</p>
+                </div>
+              </li>
+              <li class="proposal-timeline-item">
+                <div class="proposal-timeline-num">02</div>
+                <div class="proposal-timeline-content">
+                  <h4>Escopo &amp; Prazos Transparentes</h4>
+                  <p>Cronograma seguro com opção de entrega expressa em 24h a 48h para Landing Pages, sem pegadinhas nem taxas ocultas.</p>
+                </div>
+              </li>
+              <li class="proposal-timeline-item">
+                <div class="proposal-timeline-num">03</div>
+                <div class="proposal-timeline-content">
+                  <h4>Investimento Sob Medida</h4>
+                  <p>Orçamento justo calibrado para o seu momento atual, com tecnologia ultra-rápida, SSL, hospedagem e domínio inclusos.</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <!-- PLANO 3: PROJETO CUSTOMIZADO / EXTRAS — 21st.dev Spotlight Card -->
-        <div class="pricing-card-wrap">
-          <div class="spotlight-card">
-            
-            <div>
-              <div class="pricing-card-header">
-                <h3>Projeto Customizado</h3>
-                <p>Projetos sob medida, web apps, automações e soluções específicas para o seu modelo de negócios.</p>
-              </div>
-
-              <div class="pricing-price-box">
-                <div class="pricing-amount">
-                  Sob Medida
-                </div>
-                <div class="pricing-cadence">escopo personalizado</div>
-                <div style="font-size: 0.82rem; color: var(--pearl-muted); margin-top: 0.2rem;">
-                  Orçamento de acordo com a sua demanda
-                </div>
-              </div>
-
-              <ul class="pricing-features-list">
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Desenvolvimento exclusivo sob especificações do cliente</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Integrações com APIs, CRMs e sistemas externos</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Dashboards dinâmicos ou fluxos interativos</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Micro-animações GSAP personalizadas</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span>Consultoria técnica e planejamento de arquitetura</span>
-                </li>
-              </ul>
+          <div class="proposal-guarantee-pill">
+            <i data-lucide="shield-check"></i>
+            <div class="proposal-guarantee-text">
+              <strong>Garantia de Qualidade &amp; Ajustes</strong>
+              O projeto só é publicado com sua total aprovação de layout e funcionamento.
             </div>
-
-            <!-- Botão de Orçamento Personalizado (Direciona para Contato) -->
-            <a href="#contato" class="pricing-btn-secondary" aria-label="Consultar Projeto Customizado">
-              <span>Conversar Sobre o Projeto</span>
-              <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
-            </a>
-
           </div>
         </div>
 
@@ -1164,8 +1110,8 @@
     lucide.createIcons();
   </script>
 
-  <!-- Main JavaScript File (v=2.6) -->
-  <script src="js/main.js?v=2.6"></script>
+  <!-- Main JavaScript File (v=2.7) -->
+  <script src="js/main.js?v=2.7"></script>
 
 </body>
 </html>
