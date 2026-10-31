@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  updateAppHeight();
   initVideoAutoplay();
   initMobileNav();
   initSpotlightHover();
@@ -12,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initGSAPAnimations();
   initActiveNavOnScroll();
 });
+
+function updateAppHeight() {
+  document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
+window.addEventListener('resize', updateAppHeight, { passive: true });
+window.addEventListener('orientationchange', updateAppHeight, { passive: true });
 
 /* --------------------------------------------------------------------------
    1. Video Autoplay Assurance & Fallback

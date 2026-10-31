@@ -23,7 +23,7 @@
   - **Plano 1 - Landing Page Básica (Mais Recomendada):** R$ 549,00 à vista (Mensalidade R$ 65,00/mês) com borda luminosa radiante animada e CTA de WhatsApp.
   - **Plano 2 - Site Institucional Completo:** R$ 850,00 à vista (Mensalidade R$ 120,00/mês) com card spotlight interativo.
   - **Plano 3 - Projeto Customizado:** Orçamento sob medida com card spotlight interativo.
-- **Portfólio & Validação Social:** Grade de 4 projetos (destaque para o case ativo *EDI Estética Automotiva*) e depoimento real verificado do cliente Édipo com visualizador lightbox integrado.
+- **Portfólio & Validação Social:** Grade de cases reais ativos (*EDI Estética Automotiva* em Herval d'Oeste e *CT Vivi Nunes — Complexo de Areia* em Videira), área de novos parceiros e depoimento real verificado do cliente Édipo com visualizador lightbox integrado.
 - **Diretrizes de Conversão:** Limite estrito de 2 botões de WhatsApp com mensagens pré-formatadas para zero poluição visual.
 
 ---
